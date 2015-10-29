@@ -5,23 +5,23 @@
 		<head>
 		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
 
-		<title>home : JI YUCHENG</title>
+		<title>Contact 联系方式 : JI YUCHENG</title>
 
 		<link rel='stylesheet' href="style.css" tppabs="http://jiyucheng.com/ndxz-studio/site/eatock/style.css" type='text/css' />
 		<!--[if lte IE 6]>
 		<link rel='stylesheet' href="ie.css" tppabs="http://jiyucheng.com/ndxz-studio/site/eatock/ie.css" type='text/css' />
 		<![endif]-->
-		<style type='text/css'> @import url("jquery.thickbox.css")/*tpa=http://jiyucheng.com/ndxz-studio/site/css/jquery.thickbox.css*/; </style>
-
+		
 		<style type='text/css'>
-a.thickbox { border: none; }
-a.thickbox img { border: 3px solid #fff; margin: 0 6px 9px 0; }
+.backgrounded { margin-right: 1px; }
+	.backgrounded a { border: none; }
+	.backgrounded a img { border: 3px solid #fff; height: 25px; width: 25px; }
+	.backgrounded-text { margin-top: 9px; }
 </style>
 
 		<script type='text/javascript' src="jquery.js" tppabs="http://jiyucheng.com/ndxz-studio/site/js/jquery.js"></script>
 		<script type='text/javascript' src="cookie.js" tppabs="http://jiyucheng.com/ndxz-studio/site/js/cookie.js"></script>
-		<script type='text/javascript' src="thickbox.js" tppabs="http://jiyucheng.com/ndxz-studio/site/js/thickbox.js"></script>
-
+		
 		<script type='text/javascript'>
 		path = 'http://jiyucheng.com/files/gimgs/';
 
@@ -31,13 +31,32 @@ a.thickbox img { border: 3px solid #fff; margin: 0 6px 9px 0; }
 		});
 		</script>
 		<script type='text/javascript'>
-var loadingAnim = 'index.htm'/*tpa=http://jiyucheng.com/*/;
+function swapImg(a, image)
+	{
+		var the_path = 'http://jiyucheng.com/files/gimgs/' + image;
+		show = new Image;
+		show.src = the_path;
+		$('body').css({ backgroundImage: 'url(' + show.src + ')', backgroundPosition: '215px 0'  });
+
+		var title = $('#img' + a).attr('title');
+		var caption = $('#img' + a).attr('alt');
+		
+		if (title != 'N/A') 
+		{
+			caption = (caption != 'N/A') ? ': ' + caption : '';
+			$('#backgrounded-text').html('<span style="background: white; line-height: 24px;">' + title + caption + '</span>');
+		}
+		else
+		{
+			$('#backgrounded-text').html('');
+		}
+	}
 </script>
 
 		
 		</head>
 
-		<body class='section-1'>
+		<body class='section-9'>
 		<div id='menu'>
 
 
@@ -77,7 +96,7 @@ var loadingAnim = 'index.htm'/*tpa=http://jiyucheng.com/*/;
 <ul>
 <li class='section-title'>About 关于</li>
 <li><a href="index-14.htm" tppabs="http://jiyucheng.com/about/cv/" onclick="do_click();">CV 简历</a></li>
-<li><a href="index-15.htm" tppabs="http://jiyucheng.com/about/contact/" onclick="do_click();">Contact 联系方式</a></li>
+<li class='active'><a href="index-15.htm" tppabs="http://jiyucheng.com/about/contact/" onclick="do_click();">Contact 联系方式</a></li>
 </ul>
 
 
@@ -93,7 +112,14 @@ var loadingAnim = 'index.htm'/*tpa=http://jiyucheng.com/*/;
 		<div class='container'>
 
 		<!-- text and image -->
-		
+		<p><pre></p>
+
+<p></p><br />
+Mail:  yucheng.ji@network.rca.ac.uk         jiyucheng0203@126.com
+
+<p>Phone: +44(0)7462530708                     +86 18205145428</p>
+
+<p></pre></p>
 <div class='cl'><!-- --></div>
 
 		<!-- end text and image -->
